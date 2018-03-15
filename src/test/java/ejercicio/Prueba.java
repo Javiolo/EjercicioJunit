@@ -11,11 +11,11 @@ public class Prueba {
 		persona.vincularTipoImpuesto("A");
 		int calcular = persona.calcularImpuesto();
 		Assert.assertEquals(3000, calcular);
-	}
+	}// gfg
 
 	@Test
 	public void prueba1() {
-		Persona_Fiscal persona1 = new Persona_Fiscal("Javi", 32, 100);
+		Persona_Fiscal persona1 = new Persona_Fiscal("Javi", 32, 10000);
 		persona1.vincularTipoImpuesto("B");
 		int calcular = persona1.calcularImpuesto();
 		Assert.assertEquals(100000, calcular);
@@ -31,7 +31,7 @@ public class Prueba {
 
 	@Test
 	public void prueba3() {
-		Persona_Fiscal persona3 = new Persona_Fiscal("Javi", 40, 10646);
+		Persona_Fiscal persona3 = new Persona_Fiscal("Javi", 40, 10321646);
 		persona3.vincularTipoImpuesto("D");
 		int calcular = persona3.calcularImpuesto();
 		Assert.assertEquals(1, calcular);
