@@ -1,13 +1,13 @@
 package ejercicio;
 
-public class Persona_Fiscal {
+public class PersonaFiscal {
 
 	private String nombre;
 	private int edad;
 	private int sueldo;
-	Tipo_Impuesto impuesto;
+	TipoImpuesto impuesto;
 
-	public Persona_Fiscal(String _nombre, int _edad, int _sueldo) {
+	public PersonaFiscal(String _nombre, int _edad, int _sueldo) {
 		this.nombre = _nombre;
 		this.edad = _edad;
 		this.sueldo = _sueldo;
@@ -15,21 +15,21 @@ public class Persona_Fiscal {
 
 	public void vincularTipoImpuesto(String _tipo) {
 		if (_tipo.equals("A")) {
-			this.impuesto = new Tipo_Impuesto(20, 30, "A");
+			this.impuesto = new TipoImpuesto(20, 30, "A");
 		} else if (_tipo.equals("B")) {
-			this.impuesto = new Tipo_Impuesto(10, 5, "B");
+			this.impuesto = new TipoImpuesto(10, 5, "B");
 		} else if (_tipo.equals("C")) {
-			this.impuesto = new Tipo_Impuesto(30, 25, "C");
+			this.impuesto = new TipoImpuesto(30, 25, "C");
 		} else if (_tipo.equals("D")) {
-			this.impuesto = new Tipo_Impuesto(10, 30, "D");
+			this.impuesto = new TipoImpuesto(10, 30, "D");
 		}
 	}
 
-	public Tipo_Impuesto getImpuesto() {
+	public TipoImpuesto getImpuesto() {
 		return this.impuesto;
 	}
 
-	public void setImpuesto(Tipo_Impuesto _impuesto) {
+	public void setImpuesto(TipoImpuesto _impuesto) {
 		this.impuesto = _impuesto;
 	}
 
