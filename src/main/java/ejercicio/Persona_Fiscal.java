@@ -1,6 +1,7 @@
 package ejercicio;
 
 public class Persona_Fiscal {
+
 	private String nombre;
 	private int edad;
 	private int sueldo;
@@ -12,8 +13,33 @@ public class Persona_Fiscal {
 		this.sueldo = _sueldo;
 	}
 
-	public int calcularPuesto() {
-		return 0;
+	public void vincularTipoImpuesto(String _tipo) {
+		if (_tipo.equals("A")) {
+			this.impuesto = new Tipo_Impuesto(20, 30, "A");
+		} else if (_tipo.equals("B")) {
+			this.impuesto = new Tipo_Impuesto(10, 5, "B");
+		} else if (_tipo.equals("C")) {
+			this.impuesto = new Tipo_Impuesto(30, 25, "C");
+		} else if (_tipo.equals("D")) {
+			this.impuesto = new Tipo_Impuesto(10, 30, "D");
+		}
+	}
+
+	public Tipo_Impuesto getImpuesto() {
+		return this.impuesto;
+	}
+
+	public void setImpuesto(Tipo_Impuesto _impuesto) {
+		this.impuesto = _impuesto;
+	}
+
+	public int calcularImpuesto() {
+		if (this.edad < 30) {
+			return (this.sueldo * this.impuesto.getPorcentaje30()) / 100; // para llamar a porcentaje seria
+																			// this.impuesto.getPorcentaje30()
+		} else {
+			return (this.sueldo * this.impuesto.getPorcentaje()) / 100;
+		}
 	}
 
 	public String getNombre() {

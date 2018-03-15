@@ -6,6 +6,13 @@ public class Tipo_Impuesto {
 	private int porcentaje30;
 	private String nombre;
 
+	public Tipo_Impuesto(int _porcentaje, int _porcentaje30, String _nombre) {
+		this.porcentaje = _porcentaje;
+		this.porcentaje30 = _porcentaje30;
+		this.nombre = _nombre;
+
+	}
+
 	public int getPorcentaje() {
 		return this.porcentaje;
 	}
