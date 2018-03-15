@@ -18,7 +18,7 @@ public class Prueba {
 		Persona_Fiscal persona1 = new Persona_Fiscal("Javi", 32, 100);
 		persona1.vincularTipoImpuesto("B");
 		int calcular = persona1.calcularImpuesto();
-		Assert.assertEquals(10, calcular);
+		Assert.assertEquals(100000, calcular);
 	}
 
 	@Test
