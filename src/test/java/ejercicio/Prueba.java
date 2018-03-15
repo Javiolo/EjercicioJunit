@@ -23,7 +23,7 @@ public class Prueba {
 
 	@Test
 	public void prueba2() {
-		Persona_Fiscal persona2 = new Persona_Fiscal("Javier", 21, 123);
+		Persona_Fiscal persona2 = new Persona_Fiscal("Javier", 21, 165423);
 		persona2.vincularTipoImpuesto("C");
 		int calcular = persona2.calcularImpuesto();
 		Assert.assertEquals(30, calcular);
@@ -31,7 +31,7 @@ public class Prueba {
 
 	@Test
 	public void prueba3() {
-		Persona_Fiscal persona3 = new Persona_Fiscal("Javi", 40, 10);
+		Persona_Fiscal persona3 = new Persona_Fiscal("Javi", 40, 10646);
 		persona3.vincularTipoImpuesto("D");
 		int calcular = persona3.calcularImpuesto();
 		Assert.assertEquals(1, calcular);
